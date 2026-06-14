@@ -1,0 +1,180 @@
+# Agricultural Suitability Project Management Presentation Generator
+
+A professional PowerPoint presentation generator for agricultural suitability analysis projects using Node.js and `pptxgenjs`.
+
+## 📋 Features
+
+- **14 Professional Slides** covering the complete project lifecycle
+- **GIS & Remote Sensing Focus** with detailed workflow diagrams
+- **Interactive Charts** including pie charts and Gantt timelines
+- **Custom Styling** with earth-tone color scheme
+- **React Icons Integration** for professional iconography
+- **High-Quality Output** with shadows, animations, and professional layouts
+
+## 📑 Slide Contents
+
+1. **Title Slide** - Project branding and institution details
+2. **Presentation Outline** - 8 project tasks overview
+3. **Task 1: Project Initiation** - Client requirements, stakeholders, ToR
+4. **Task 2: Project Planning** - WBS, resources, budget, team composition
+5. **Project Timeline** - Gantt chart with 12-week schedule
+6. **Data Requirements** - Multi-source datasets table (8 datasets)
+7. **Analysis Workflow** - 14-step GIS processing pipeline
+8. **MCDA/AHP Analysis** - Criterion weights with pie chart and table
+9. **Suitability Classes** - FAO framework (S1, S2, S3, N)
+10. **Field Verification** - Ground-truthing and accuracy assessment
+11. **Deliverables** - 6 project outputs with descriptions
+12. **Monitoring & QA** - Quality control pillars and RAG status system
+13. **Project Closure** - 5-step handover and archiving process
+14. **Conclusion** - Key takeaways and closing remarks
+
+## 🚀 Installation & Setup
+
+### Prerequisites
+- Node.js (v14+)
+- npm
+
+### Step 1: Install Dependencies
+```bash
+npm install
+```
+
+This will install:
+- `pptxgenjs` - PowerPoint generation library
+- `react` & `react-dom` - React rendering
+- `react-icons` - Icon library (Font Awesome)
+- `sharp` - Image processing
+
+### Step 2: Generate Presentation
+```bash
+npm run generate
+```
+
+Or run directly:
+```bash
+node generate-presentation.js
+```
+
+## 📁 Output
+
+The presentation will be saved as:
+```
+Agricultural_Suitability_Presentation.pptx
+```
+
+Located in your current working directory.
+
+## 🎨 Customization
+
+### Change Colors
+Edit the color palette in `generate-presentation.js`:
+
+```javascript
+const C = {
+  dark:    "1B3A2D",  // Dark green
+  mid:     "2E7D52",  // Medium green
+  light:   "52B788",  // Light green
+  accent:  "B7E4C7",  // Accent green
+  // ... more colors
+};
+```
+
+### Modify Slide Content
+- Update text content directly in the slide sections
+- Modify the `datasets` array for the data requirements slide
+- Adjust `items`, `activities`, `deliverables`, etc. arrays
+
+### Change Output Path
+Modify the output path in the last section:
+
+```javascript
+const outputPath = path.join(process.cwd(), "your-filename.pptx");
+```
+
+## 📊 Key Data
+
+### Project Specifications
+- **Duration:** 12 weeks
+- **Team Size:** 7 specialists
+- **Budget:** TZS 45 million
+- **Contingency:** 15%
+- **Target Crop:** Maize (district-wide)
+- **Map Scale:** 1:50,000
+
+### Accuracy Requirements
+- **Overall Accuracy:** ≥ 80%
+- **Kappa Coefficient:** ≥ 0.75
+- **AHP Consistency Ratio:** ≤ 0.10
+
+### AHP Weights (MCDA)
+- Soil: 35% (Highest priority)
+- Rainfall: 25%
+- Slope: 15%
+- LULC: 10%
+- Accessibility: 8%
+- Flood Risk: 4%
+- Temperature: 3%
+
+## 🛠 Troubleshooting
+
+### Issue: Module not found
+**Solution:** Run `npm install` to ensure all dependencies are installed.
+
+### Issue: Sharp compilation fails
+**Solution:** Install build tools:
+- **Ubuntu/Debian:** `sudo apt-get install build-essential python3`
+- **macOS:** Install Xcode Command Line Tools
+- **Windows:** Install Visual Studio Build Tools
+
+### Issue: Memory error on large presentations
+**Solution:** Increase Node.js memory:
+```bash
+node --max-old-space-size=4096 generate-presentation.js
+```
+
+## 📝 Project Structure
+
+```
+mine/
+├── package.json                              # Dependencies
+├── generate-presentation.js                  # Main script
+└── README.md                                 # This file
+```
+
+## 💡 Use Cases
+
+- **Academic Presentations** - University GIS projects
+- **Client Proposals** - Agricultural development projects
+- **Project Planning** - Government and NGO initiatives
+- **Training Materials** - GIS and remote sensing courses
+
+## 📚 Technologies Used
+
+- **pptxgenjs** - PowerPoint generation
+- **React** - Component rendering
+- **Sharp** - Image processing
+- **Font Awesome Icons** - Professional iconography
+
+## 📄 License
+
+MIT License - Feel free to use and modify for your projects.
+
+## 🤝 Contributing
+
+To modify or enhance:
+1. Edit the JavaScript directly
+2. Run `npm run generate` to test
+3. Review the generated PPTX
+
+## ✨ Notes
+
+- All datasets mentioned are freely accessible (GEE, OSM, GADM)
+- Presentation follows international GIS standards
+- FAO framework for land suitability classification
+- Compatible with MS PowerPoint, Google Slides, and LibreOffice
+
+---
+
+**Generated by:** Agricultural Suitability Framework  
+**Institution:** Ardhi University, Tanzania  
+**Last Updated:** June 2026
