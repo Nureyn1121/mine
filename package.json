@@ -1,0 +1,20 @@
+{
+  "name": "agricultural-suitability-presentation",
+  "version": "1.0.0",
+  "description": "Professional PPTX generator for Agricultural Suitability Project Management",
+  "main": "generate-presentation.js",
+  "scripts": {
+    "generate": "node generate-presentation.js",
+    "start": "node generate-presentation.js"
+  },
+  "keywords": ["pptx", "presentation", "gis", "agriculture"],
+  "author": "Ardhi University",
+  "license": "MIT",
+  "dependencies": {
+    "pptxgenjs": "^3.12.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
+    "sharp": "^0.32.0"
+  }
+}
